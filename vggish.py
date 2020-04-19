@@ -10,8 +10,8 @@ from __future__ import print_function
 from __future__ import absolute_import
 
 import sys
-sys.path.append('/home/hudi/anaconda2/lib/python2.7/site-packages/h5py')
-sys.path.append('/home/hudi/anaconda2/lib/python2.7/site-packages/Keras-2.0.6-py2.7.egg')
+# sys.path.append('/home/hudi/anaconda2/lib/python2.7/site-packages/h5py')
+# sys.path.append('/home/hudi/anaconda2/lib/python2.7/site-packages/Keras-2.0.6-py2.7.egg')
 
 
 from keras.models import Model
@@ -22,8 +22,8 @@ from keras import backend as K
 import vggish_params as params
 
 # weight path
-WEIGHTS_PATH = '/mount/hudi/moe/moce/soundnet_moce/sound/weights/vggish_audioset_weights_without_fc2.h5'
-WEIGHTS_PATH_TOP = '/mount/hudi/moe/moce/soundnet_moce/sound/weights/vggish_audioset_weights.h5'
+WEIGHTS_PATH = '/content/vggish_audioset_weights_without_top.h5'
+WEIGHTS_PATH_TOP = '/content/vggish_audioset_weights.h5'
 
 def VGGish(load_weights=True, weights='audioset',
            input_tensor=None, input_shape=None,
