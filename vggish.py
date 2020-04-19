@@ -22,8 +22,8 @@ from keras import backend as K
 import vggish_params as params
 
 # weight path
-WEIGHTS_PATH = '/content/vggish_audioset_weights_without_top.h5'
-WEIGHTS_PATH_TOP = '/content/vggish_audioset_weights.h5'
+WEIGHTS_PATH = '/content/drive/My Drive/vggish_weights/vggish_audioset_weights_without_fc2.h5'
+WEIGHTS_PATH_TOP = '/content/drive/My Drive/vggish_weights/vggish_audioset_weights.h5'
 
 def VGGish(load_weights=True, weights='audioset',
            input_tensor=None, input_shape=None,
