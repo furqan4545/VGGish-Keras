@@ -80,11 +80,10 @@ def VGGish(load_weights=True, weights='audioset',
     # Block 4
     x = Conv2D(512, (3, 3), strides=(1, 1), activation='relu', padding='same', name='conv4/conv4_1')(x)
     x = Conv2D(512, (3, 3), strides=(1, 1), activation='relu', padding='same', name='conv4/conv4_2')(x)
-    
+    x = MaxPooling2D((2, 2), strides=(2, 2), padding='same', name='pool4')(x)
 
     if include_top:
         # FC block
-        x = MaxPooling2D((2, 2), strides=(2, 2), padding='same', name='pool4')(x)
         x = Flatten(name='flatten_')(x)
         x = Dense(4096, activation='relu', name='vggish_fc1/fc1_1')(x)
         x = Dense(4096, activation='relu', name='vggish_fc1/fc1_2')(x)
